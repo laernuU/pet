@@ -1,0 +1,8 @@
+ru\nikita\library\Controllers\BooksController.class
+ru\nikita\library\models\Book.class
+ru\nikita\library\Config\DispatcherServlet.class
+ru\nikita\library\Controllers\WatchController.class
+ru\nikita\library\dao\WatchDAO.class
+ru\nikita\library\Config\SpringConfig.class
+ru\nikita\library\dao\BookDAO.class
+ru\nikita\library\models\Watch.class

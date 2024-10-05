@@ -1,0 +1,19 @@
+<html lang="en" xmlns:th="http://thymeleaf.org"></html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Show</title>
+</head>
+
+<body>
+<p th:text="${watch.getName}">VALUE</p>
+<p th:text="${watch.getSeries}">VALUE</p>
+<p th:text="${watch.getSeasons}">VALUE</p>
+<p th:text="${watch.getId}">VALUE</p>
+<a th:href="@{/watches/{id}/edit(id=${watch.getId()})}">Edit</a>
+<form th:method="delete" th:action="@{/watches/{id}(id=${watch.getId()})}">
+    <input type="submit" value="Delete"/>
+</form>
+
+</body>
+</html>

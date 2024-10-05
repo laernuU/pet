@@ -1,0 +1,40 @@
+<html lang="en" xmlns:th="http://thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Edit</title>
+</head>
+<body>
+    <form th:method="PATCH" th:action="@{/books/{id}(id=${book.getId()})}" th:object="${book}">
+
+        <label for="nameOfBook">Enter name Of Book: </label> 
+        <input type="text" th:field="*{nameOfBook}" id="nameOfBook"/>
+        <div style="color: red" th:if="${#fields.hasErrors('nameOfBook')}" th:errors="*{nameOfBook}">nameOfBook error</div>
+
+        <br>
+
+        <label for="author">Enter author: </label> 
+        <input type="text" th:field="*{author}" id="author"/>
+        <div style="color: red" th:if="${#fields.hasErrors('author')}" th:errors="*{author}">author error</div>
+
+        <br>
+
+        <label for="years">Enter years: </label> 
+        <input type="text" th:field="*{years}" id="years"/>
+        <div style="color: red" th:if="${#fields.hasErrors('years')}" th:errors="*{years}">years error</div>
+
+        <br>
+        <label for="numberOfPages">Enter number Of Pages: </label> 
+        <input type="text" th:field="*{numberOfPages}" id="numberOfPages"/>
+        <div style="color: red" th:if="${#fields.hasErrors('numberOfPages')}" th:errors="*{numberOfPages}">numberOfPages error</div>
+
+        <br>
+        <label for="price">Enter price: </label> 
+        <input type="text" th:field="*{price}" id="price"/>
+        <div style="color: red" th:if="${#fields.hasErrors('price')}" th:errors="*{price}">years price</div>
+
+        <input type="submit" value="Update!">
+    </form>
+    
+</body>
+</html>
